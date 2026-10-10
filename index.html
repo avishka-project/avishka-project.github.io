@@ -1,7 +1,94 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><title>GreenThru Backup</title></head>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Dev Playground</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: "Segoe UI", Arial, sans-serif; margin: 0; background: #f4f6fb; color: #222; }
+  header { background: linear-gradient(135deg, #4f46e5, #06b6d4); color: #fff; padding: 50px 20px; text-align: center; }
+  header h1 { margin: 0 0 8px; font-size: 32px; }
+  main { max-width: 900px; margin: 30px auto; padding: 0 20px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .card { background: #fff; border-radius: 10px; padding: 18px; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+  .card h3 { margin-top: 0; }
+  .tag { display: inline-block; background: #eef2ff; color: #4f46e5; font-size: 12px; padding: 2px 8px; border-radius: 10px; margin-right: 4px; }
+  button { background: #4f46e5; color: #fff; border: 0; padding: 10px 18px; border-radius: 6px; cursor: pointer; font-size: 15px; }
+  button:hover { background: #4338ca; }
+  #counter { font-size: 28px; font-weight: bold; margin: 0 12px; }
+  footer { text-align: center; color: #888; font-size: 13px; padding: 30px 0; }
+  footer a { color: #888; }
+</style>
+</head>
 <body>
-<h1>GreenThru Backup</h1>
-<p>GreenThru Backup uploads database backup files from the GreenThru Label System server to the owner's own Google Drive.</p>
-<p><a href="privacy.html">Privacy policy</a></p>
-</body></html>
+
+<header>
+  <h1>My Dev Playground</h1>
+  <p>Learning HTML, CSS and JavaScript one small project at a time.</p>
+</header>
+
+<main>
+  <h2>Practice projects</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>To-do list</h3>
+      <p>Add, tick and delete tasks. Saves to localStorage.</p>
+      <span class="tag">HTML</span><span class="tag">JS</span>
+    </div>
+    <div class="card">
+      <h3>Weather card</h3>
+      <p>Shows today's weather from a free API. Still fixing the icons.</p>
+      <span class="tag">API</span><span class="tag">fetch</span>
+    </div>
+    <div class="card">
+      <h3>Calculator</h3>
+      <p>Basic calculator with keyboard support.</p>
+      <span class="tag">CSS Grid</span><span class="tag">JS</span>
+    </div>
+    <div class="card">
+      <h3>Quiz app</h3>
+      <p>10 random questions with a score at the end.</p>
+      <span class="tag">Arrays</span><span class="tag">DOM</span>
+    </div>
+    <div class="card">
+      <h3>Color picker</h3>
+      <p>Pick a color and copy its HEX and RGB codes.</p>
+      <span class="tag">Events</span>
+    </div>
+    <div class="card">
+      <h3>Small tools</h3>
+      <p>Little scripts and utilities I try out while learning.</p>
+      <span class="tag">Misc</span>
+    </div>
+  </div>
+
+  <h2>Click counter test</h2>
+  <div class="card">
+    <button onclick="change(-1)">-</button>
+    <span id="counter">0</span>
+    <button onclick="change(1)">+</button>
+  </div>
+
+  <h2>Ideas for next</h2>
+  <ul>
+    <li>Dark mode switch</li>
+    <li>Expense tracker with a chart</li>
+    <li>Simple notes app</li>
+    <li>Learn a backend (PHP or Node.js)</li>
+  </ul>
+</main>
+
+<footer>
+  Made while learning &middot; 2026 &middot; <a href="privacy.html">Privacy policy</a>
+</footer>
+
+<script>
+  let count = 0;
+  function change(step) {
+    count += step;
+    document.getElementById('counter').textContent = count;
+  }
+</script>
+</body>
+</html>
